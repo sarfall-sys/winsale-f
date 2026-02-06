@@ -4,10 +4,14 @@ This is the frontend application of the Sales Insights Platform.
 It provides a dashboard for interacting with the AI service through the Laravel backend.
 ---
 ##  🚀 Features
--Dashboard UI
-- Insights UI
-- Communicates only with Laravel, never directly with Python
-- Environment-based configuration
+- Basic dashboard layout (WIP)
+- Data visualization charts and tables
+- API integration layer using Axios
+- Environment-aware API configuration
+- Requests to:
+  - `/api/ai/forecast`
+  - `/api/ai/insights`
+  - `/api/ai/anomalies`
 ----
 ##  🛠️ Technologies
 -React.js
@@ -29,3 +33,25 @@ VITE_API_URL=http://localhost:8000/
 ````bash
 npm run dev
 ````
+---
+#🛠️ Planned Features (Coming Soon)
+These will be implemented as the UI grows:
+- Buttons for triggering AI actions:
+  - **Generate Forecast**
+  - **Generate Insights**
+  - **Detect Anomalies**
+### 🧠 **AI Data Storage**
+
+- Save “Historical Insights” in the database (Laravel)
+- Save “Anomaly Predictions” for long-term analysis
+- Save “Forecast Results” for reporting
+
+### 📊 **History Screens**
+- Insights history page
+- Anomaly logs page
+- Forecast trends history
+
+### ⏳ **Automation **
+- Daily scheduled insights generation (Laravel scheduler)
+- Weekly or monthly reports
+- Notifications when anomalies are detected
