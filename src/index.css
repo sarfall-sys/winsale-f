@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-regular {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  /* 1. Light Theme (Amethyst) */
+  :root {
+    /* Core */
+    --background: #f2ecf8; /* dark-amethyst-50 */
+    --text-primary: #311a4c; /* dark-amethyst-800 */
+    --text-secondary: #492772; /* dark-amethyst-700 */
+
+    /* Interactive */
+    --primary: #7941be; /* dark-amethyst-500 */
+    --primary-hover: #613498; /* dark-amethyst-600 */
+    --accent: #9467cb; /* dark-amethyst-400 */
+
+    /* Supporting */
+    --secondary: #d8b4fe; /* Complementary purple */
+    --neutral: #af8dd8; /* dark-amethyst-300 */
+    --border: #e4d9f2; /* dark-amethyst-100 */
+
+    /* Semantic */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #3b82f6;
+
+    /* Light Blue */
+    --color-light-blue-50: #eff6f5;
+    --color-light-blue-100: #deedeb;
+    --color-light-blue-200: #bedad8;
+    --color-light-blue-300: #9dc8c4;
+    --color-light-blue-400: #7cb6b1;
+    --color-light-blue-500: #5ca39d;
+    --color-light-blue-600: #49837e;
+    --color-light-blue-700: #37625e;
+    --color-light-blue-800: #25413f;
+    --color-light-blue-900: #12211f;
+    --color-light-blue-950: #0d1716;
+
+    /*Magenta*/
+
+    --color-magenta-bloom-50: #fbe9ef;
+    --color-magenta-bloom-100: #f8d3df;
+    --color-magenta-bloom-200: #f0a8c0;
+    --color-magenta-bloom-300: #e97ca0;
+    --color-magenta-bloom-400: #e15181;
+    --color-magenta-bloom-500: #da2561;
+    --color-magenta-bloom-600: #ae1e4e;
+    --color-magenta-bloom-700: #83163a;
+    --color-magenta-bloom-800: #570f27;
+    --color-magenta-bloom-900: #2c0713;
+    --color-magenta-bloom-950: #1f050e;
+
+    /*Jungle Teal*/
+
+    --color-jungle-teal-50: #eff5f1;
+    --color-jungle-teal-100: #dfece3;
+    --color-jungle-teal-200: #c0d8c7;
+    --color-jungle-teal-300: #a0c5ab;
+    --color-jungle-teal-400: #81b18f;
+    --color-jungle-teal-500: #619e73;
+    --color-jungle-teal-600: #4e7e5c;
+    --color-jungle-teal-700: #3a5f45;
+    --color-jungle-teal-800: #273f2e;
+    --color-jungle-teal-900: #132017;
+    --color-jungle-teal-950: #0e1610;
+  }
+
+  /* 2. Dark Theme (Amethyst) */
+  .dark {
+    /* Core */
+    --background: #11091b; /* dark-amethyst-950 */
+    --text-primary: #f2ecf8; /* dark-amethyst-50 */
+    --text-secondary: #e4d9f2; /* dark-amethyst-100 */
+
+    /* Interactive */
+    --primary: #9467cb; /* dark-amethyst-400 */
+    --primary-hover: #af8dd8; /* dark-amethyst-300 */
+    --accent: #cab3e5; /* dark-amethyst-200 */
+
+    /* Supporting */
+    --secondary: #7941be; /* dark-amethyst-500 */
+    --neutral: #492772; /* dark-amethyst-700 */
+    --border: #311a4c; /* dark-amethyst-800 */
+
+    /* Semantic (adjusted for dark theme) */
+    --success: #34d399;
+    --warning: #fbbf24;
+    --danger: #f87171;
+    --info: #60a5fa;
+  }
+}
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-light-blue-50: var(--color-light-blue-50);
+  --color-light-blue-100: var(--color-light-blue-100);
+  --color-light-blue-200: var(--color-light-blue-200);
+  --color-light-blue-300: var(--color-light-blue-300);
+  --color-light-blue-400: var(--color-light-blue-400);
+  --color-light-blue-500: var(--color-light-blue-500);
+  --color-light-blue-600: var(--color-light-blue-600);
+  --color-light-blue-700: var(--color-light-blue-700);
+  --color-light-blue-800: var(--color-light-blue-800);
+  --color-light-blue-900: var(--color-light-blue-900);
+  --color-light-blue-950: var(--color-light-blue-950);
+  --color-magenta-bloom-50: var(--color-magenta-bloom-50);
+  --color-magenta-bloom-100: var(--color-magenta-bloom-100);
+  --color-magenta-bloom-200: var(--color-magenta-bloom-200);
+  --color-magenta-bloom-300: var(--color-magenta-bloom-300);
+  --color-magenta-bloom-400: var(--color-magenta-bloom-400);
+  --color-magenta-bloom-500: var(--color-magenta-bloom-500);
+  --color-magenta-bloom-600: var(--color-magenta-bloom-600);
+  --color-magenta-bloom-700: var(--color-magenta-bloom-700);
+  --color-magenta-bloom-800: var(--color-magenta-bloom-800);
+  --color-magenta-bloom-900: var(--color-magenta-bloom-900);
+  --color-magenta-bloom-950: var(--color-magenta-bloom-950);
+  --colo--jungle-teal-50: var(--color-jungle-teal-50);
+  --color-jungle-teal-100: var(--color-jungle-teal-100);
+  --color-jungle-teal-200: var(--color-jungle-teal-200);
+  --color-jungle-teal-300: var(--color-jungle-teal-300);
+  --color-jungle-teal-400: var(--color-jungle-teal-400);
+  --color-jungle-teal-500: var(--color-jungle-teal-500);
+  --color-jungle-teal-600: var(--color-jungle-teal-600);
+  --color-jungle-teal-700: var(--color-jungle-teal-700);
+  --color-jungle-teal-800: var(--color-jungle-teal-800);
+  --color-jungle-teal-900: var(--color-jungle-teal-900);
+  --color-jungle-teal-950: var(--color-jungle-teal-950);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+}
