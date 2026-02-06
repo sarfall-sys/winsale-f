@@ -1,6 +1,6 @@
-# React + Vite
+#React js. Frontend Winsale Inventory AI System
 
-This is the frontend application of the Sales Insights Platform.
+This is the frontend application of the Winsale Inventory AI System
 It provides a dashboard for interacting with the AI service through the Laravel backend.
 ---
 ##  🚀 Features
